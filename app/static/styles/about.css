@@ -1,2 +1,31 @@
 @import './constants.css';
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@500&display=swap');
+
+.about__header{
+    display:flex;
+    width: 100vw;
+    height:8vh;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+    box-shadow:0px 5px 10px -9px rgba(0, 0, 0, 0.7);
+    border-bottom: 2px solid var(--primary-color);
+    justify-content: space-between;
+    position:sticky;
+    background-color: var(--background-color);
+    top:0;
+    z-index:100;
+}
+
+.about__headerButtons {
+    display:flex;
+    justify-content: space-evenly;
+    font-size: var(--secondary-heading-size);
+    color: var(--primary-color);
+    margin: 10px;
+    margin-right: 15px;
+}
+.about__headerButton {
+    margin: 10px;
+}
+
