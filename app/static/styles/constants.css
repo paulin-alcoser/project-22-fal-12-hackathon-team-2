@@ -1,0 +1,8 @@
+:root{
+    --background-color: #FCF6F5FF;
+    --primary-color: #EA738DFF;
+    --secondary-color: #89ABE3FF;
+    font-size: 18px;
+    --main-heading-size: 2rem;
+    --secondary-heading-size: 1.5rem;
+}
