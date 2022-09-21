@@ -4,6 +4,34 @@
 body{
     background-color: var(--background-color);
     display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center;     */
+}
+
+.base__header{
+    display:flex;
+    justify-content: space-between;
+    width: 100vw;
+    height:8vh;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+    box-shadow:0px 5px 10px -9px rgba(0, 0, 0, 0.7);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.base__header > h1 {
+    margin: 10px;
+}
+
+.base__header > h2 {
+    margin:10px;
+    align-self: flex-end;
+}
+
+.base__container{
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -22,7 +50,7 @@ body{
     /* box-shadow:0px 5px 17px -7px rgba(0, 0, 0, 0.9); */
 }
 
-.base__card > img {
+.base__card > a > img {
     height:400px;
     width:400px;
     object-fit: cover;
@@ -36,16 +64,17 @@ body{
     border: 15px solid var(--primary-color);
 }
 
-.base__card > img:hover {
+.base__card > a > img:hover {
     transform: scale(1.07)
 }
 
-.base__card > h2 {
+.base__card > a > h2 {
     color: var(--primary-color);
     font-family: 'Poppins', sans-serif;
     font-size: var(--secondary-heading-size);
+    
 }
 
-.base__card > h2:hover {
+.base__card > a > h2:hover {
     color:lightgray;
 }

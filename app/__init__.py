@@ -10,6 +10,15 @@ app = Flask(__name__)
 def index():
     return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"))
 
-@app.route('/base')
-def about():
+@app.route('/home')
+def base():
     return render_template('base.html')
+
+@app.route('/home/<username>')
+def about(username):
+    if username == "PaulinAlcoser":
+        return render_template('about.html')
+    elif username == "AlexisGray":
+        return render_template('about.html')
+    else: 
+        return "<h1>Username did not match</h1>"
