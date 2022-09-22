@@ -85,3 +85,56 @@
     width: 33vw;
     height: 10px;
 }
+
+/* ---------------------------------------------------------------------- */
+
+.education__content{
+    height:100vh;
+    width:100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.education__contentTitle{
+    color: var(--primary-color);
+    text-align:center;
+}
+
+.education__contentCenter{
+    display: flex;
+    width:100vw;
+    
+
+}
+
+.education__contentCollege{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    width: 33vw;
+    
+}
+
+.education__contentCollege > img{
+    border-radius: 5px;
+    box-shadow:0px 5px 10px -9px rgba(0, 0, 0, 0.7);
+}
+
+.education__contentDescription{
+    display:flex;
+    flex-direction: column;
+    width:33vw;
+    align-items: center;
+    font-size: var(--secondary-heading-size);
+    color: var(--primary-color);
+}
+
+.education__contentDescription > h2 {
+
+}
+
+
+
+
+
