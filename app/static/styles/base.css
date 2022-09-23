@@ -1,0 +1,83 @@
+@import './constants.css';
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@500&display=swap');
+
+body{
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center;     */
+}
+
+.base__header{
+    display:flex;
+    justify-content: space-between;
+    width: 100vw;
+    height:8vh;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+    box-shadow:0px 5px 10px -9px rgba(0, 0, 0, 0.7);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.base__header > h1 {
+    margin: 10px;
+}
+
+.base__header > h2 {
+    margin-right:20px;
+    
+}
+
+.base__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.base__card{
+    width: 30vw;
+    height:60vh;
+    min-width: 400px;
+    min-height: 400px;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5vw;
+    /* box-shadow:0px 5px 17px -7px rgba(0, 0, 0, 0.9); */
+}
+a {
+    text-decoration: none;
+}
+.base__card > a > img {
+    height:400px;
+    width:400px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 10px;
+    box-shadow:0px 5px 17px -7px rgba(0, 0, 0, 0.9);
+    display: block;
+    box-sizing: border-box;
+    transition: transform 100ms ease-in; 
+    background-color: var(--primary-color);
+    border: 15px solid var(--primary-color);
+}
+
+.base__card > a > img:hover {
+    transform: scale(1.07)
+}
+
+.base__card > a > h2 {
+    color: var(--primary-color);
+    /* color:black; */
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--secondary-heading-size);
+    
+}
+
+.base__card > a > h2:hover {
+    color:lightgray;
+}

@@ -1,0 +1,72 @@
+{
+    "info":{
+        "fullName": "Paulin Alcoser",
+        "name": "Paulin",
+        "photo":"../static/img/PaulinProfile.jpg",
+        "about":"I am a Web Developer and a CS undergrad student, presently on my senior year at New York University Abu Dhabi. Although I am majoring in Computer Science, I gathered my first experiences building websites by taking classes in the Interactive Media Arts program of my university. This multidisciplinay background gave me a passion for the coding and storytelling components of web development. I enjoy building servers and interactive front-ends, as much as I enjoy designing websites as mediums for storytelling. I just finished a software engineer internship at the start up Dapi, where I used puppeteer to reverse engineer the front-end of different websites to create bots.",
+        "github": "https://github.com/paulin-alcoser",
+        "linkedin": "https://www.linkedin.com/in/paulin-alcoser-chong-824597197/"
+    },
+    "education":{
+        "college":"New York University Abu Dhabi",
+        "major": "Computer Science",
+        "class": "2022"
+    },
+    "experiences":[
+        {
+            "name": "MLH Fellowship",
+            "description": "12-week internship where participants collaborate on real open source projects with engineers from top companies",
+            "more":"https://fellowship.mlh.io/programs/site-reliability-engineering",
+            "photo": "../static/img/logo.jpg"
+        },
+        {
+            "name": "Cardstack",
+            "description":"SWE intern at Cardstack, which is a startup that is creating a framework for building web3 apps. ",
+            "more": "https://www.linkedin.com/in/paulin-alcoser-chong-824597197/",
+            "photo":"../static/img/cardstack.jpeg"
+
+        },
+        {
+            "name":"Tinder Clone",
+            "description": " Recreated Tinder interface with React and firebase",
+            "more":"https://github.com/paulin-alcoser/tinder-clone",
+            "photo":"../static/img/tinder-clone.png"
+        }
+    ],
+    "hobbies":[
+        {
+            "name": "Soccer",
+            "description": "I have been playing soccer since I am 5 years old and I have been fortunate to make lots of friends through this game",
+            "photo":"../static/img/soccer.jpeg",
+            "more":"disabled"
+            
+        },
+        {
+            "name": "Guitar",
+            "description": "I learned how to play the guitar when I was 10 and since then I had have many hours of fun where I can just escape to the sounds of the guitar",
+            "photo":"../static/img/guitar.jpg",
+            "more": "disabled"
+        },
+
+        {
+            "name": "Tech + Art",
+            "description": "During college, I made a minor in Interactive Media in which I learnt to make art through programming and engineering",
+            "photo":"../static/img/im.jpg",
+            "more":"https://www.nyuadim.com/"
+        }
+    ],
+    "locations":[
+        {
+            "lat":32.543000419639505,
+            "long":-117.02403425268179
+        },
+        {
+            "lat":24.431940835517487,
+            "long":54.48061808994011
+        },
+        {
+            "lat":40.712765401763576,
+            "long": -73.9893289369465
+        }
+    ]
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link lang='sass' rel="stylesheet" href="../static/styles/about.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script type="text/javascript">
+        function initMap() {
+            // The location of Uluru
+            var dataJson = '{{data.locations|tojson|safe}}'
+            dataJson.replaceAll("\'","\"")
+            console.log(dataJson)
+            var locations = Array.from(JSON.parse(dataJson))
+        
+            const london = { lat:51.52574482485191, lng: -0.12634439219556462 };
+            // The map, centered at Uluru
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 2,
+                center: london,
+            });
+            
+            for(var i = 0; i < locations.length; i++){
+                console.log(locations[i].lat, locations[i].long)
+                var new_pos = {lat:locations[i].lat, lng: locations[i].long}
+                new google.maps.Marker({
+                    position: new_pos,
+                    map: map,
+                });
+            }
+        }
+        window.initMap = initMap;
+
+    </script>
+    <title>{{data.info.fullName}}</title>
+</head>
+<body>
+    <div class="about__header">
+        <a href="/home">
+            <h1>{{data.info.fullName}}</h1>
+        </a>
+        
+        <div class="about__headerButtons">
+            
+            <a href="#about" class="about__headerButton">About</a>
+            
+            <a href="#experience" class="about__headerButton">Experience</a>
+            
+            <a href="#hobbies" class="about__headerButton">Hobbies</a>
+           
+            <a href="#map_section" class="about__headerButton">Map</a>
+                
+        </div>  
+    </div>
+    
+    <div class="about__content" id="about">
+        <h1 class="about__contentTitle">
+            Hello! I am {{data.info.fullName}}
+        </h1>
+        <div class="about__contentCenter">
+            <div class="about__contentCenter_img">
+                <img src={{data.info.photo}} alt="photo">
+                <div class="about__contentButtons">
+                    <a href={{data.info.github}} target="_blank">
+                        <img src="../static/img/github2.png" alt="">
+                    </a>
+                    <a href={{data.info.linkedin}} target="_blank">
+                        <img src="../static/img/linkedIn.png" alt="">
+                    </a>    
+                </div>
+            </div>
+            
+            <p> {{data.info.about}}</p> 
+            <div class="about__contentCenter">
+                <div class="education__contentCollege">
+                    <img src="../static/img/nyuad.png" alt="photo">
+                    <div class="education__contentCollege_info">
+                        <h3> {{data.education.college}}</h3>
+                        <h3> Major in {{data.education.major}}</h3>
+                        <h3> Class of {{data.education.class}} </h3>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    
+
+    <div class="work" id="experience">
+        <h1 class="work__title">Experience</h1>
+        <div class="work__cards">
+            {% for exp in data.experiences: %}
+            <div class="work__card" style="background-image:url({{exp.photo}}) ;">
+                <div class="work__cardContainer">
+                    <h2 class="work__descriptionTitle">{{exp.name}}</h2>
+                    <p>{{exp.description}} </p>
+                    <a href={{exp.more}} target="_blank" class="button">Learn More</a>
+                </div>   
+            </div>
+            
+            {% endfor %}
+        </div>
+        
+    </div>
+
+    <div class="work hobbies" id="hobbies">
+        <h1 class="work__title">Hobbies</h1>
+        <div class="work__cards">
+            {% for hob in data.hobbies: %}
+            <div class="work__card" style="background-image:url({{hob.photo}}) ;">
+                <div class="work__cardContainer">
+                    <h2 class="work__descriptionTitle">{{hob.name}}</h2>
+                    <p>{{hob.description}} </p>
+                    {% if hob.more == "disabled" %}
+                        <a class="button" style="background-color: transparent;" ></a>
+                    {% else %}
+                    <a href={{hob.more}} target="_blank" class="button">Learn More</a>
+                    {% endif %}
+                </div>   
+            </div>
+            
+            {% endfor %}
+            
+
+        </div>
+        
+    </div>
+
+    <div class="map__content" id="map_section">
+        <h1 class="work__title">Places</h1>
+        <div id="map"></div>
+    </div>
+
+    
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClG7VvTcmhuUjRmCKVdTkJByd1i9zZnr4&callback=initMap&v=weekly"
+      defer
+    ></script>
+</body>
+</html>
