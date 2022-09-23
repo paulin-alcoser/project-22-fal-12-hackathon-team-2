@@ -1,0 +1,16 @@
+{
+    "info":{
+        "fullName": "Paulin Alcoser",
+        "name": "Paulin",
+        "photo":"../static/img/PaulinProfile.jpg",
+        "about":"I am a Web Developer and a CS undergrad student, presently on my senior year at New York University Abu Dhabi. Although I am majoring in Computer Science, I gathered my first experiences building websites by taking classes in the Interactive Media Arts program of my university. This multidisciplinay background gave me a passion for the coding and storytelling components of web development. I enjoy building servers and interactive front-ends, as much as I enjoy designing websites as mediums for storytelling. I just finished a software engineer internship at the start up Dapi, where I used puppeteer to reverse engineer the front-end of different websites to create bots.",
+        "github": "https://github.com/paulin-alcoser",
+        "linkedin": "https://www.linkedin.com/in/paulin-alcoser-chong-824597197/"
+    },
+    "education":{
+        "college":"New York University Abu Dhabi",
+        "major": "Computer Science",
+        "class": "2022"
+    }
+
+}
