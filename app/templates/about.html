@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="about__header">
-        <h1>Paulin Alcoser</h1>
+        <h1>{{data.info.fullName}}</h1>
         <div class="about__headerButtons">
             
             <a href="#about" class="about__headerButton">About</a>
@@ -27,32 +27,29 @@
     
     <div class="about__content" id="about">
         <h1 class="about__contentTitle">
-            Hello! I am Paulin Alcoser
+            Hello! I am {{data.info.fullName}}
         </h1>
         <div class="about__contentCenter">
             <div class="about__contentCenter_img">
-                <img src="../static/img/PaulinProfile.jpg" alt="photo">
+                <img src={{data.info.photo}} alt="photo">
                 <div class="about__contentButtons">
-                    <a href="">
+                    <a href={{data.info.github}} target="_blank">
                         <img src="../static/img/github2.png" alt="">
                     </a>
-                    <a href="">
+                    <a href={{data.info.linkedin}} target="_blank">
                         <img src="../static/img/linkedIn.png" alt="">
                     </a>    
                 </div>
             </div>
             
-            <p> Duis est consequat pariatur aute enim tempor mollit ea cupidatat irure est cupidatat. Sunt amet elit fugiat ullamco duis magna. Consectetur pariatur irure cupidatat consequat sunt veniam velit do amet in culpa consequat est. Cillum nisi eu et laboris in adipisicing sint nostrud. Eu non duis nostrud eiusmod minim qui mollit magna sit sunt laboris aliquip minim. Do exercitation commodo esse anim ea ex sit duis. Ea occaecat anim sint nulla sunt.
-
-                Incididunt commodo tempor laborum sunt excepteur consectetur do id anim est. Occaecat sunt deserunt minim ut sunt commodo velit ex irure culpa est dolore nostrud incididunt. Qui ad enim in ipsum in magna qui. 
-            </p> 
+            <p> {{data.info.about}}</p> 
             <div class="about__contentCenter">
                 <div class="education__contentCollege">
                     <img src="../static/img/nyuad.png" alt="photo">
                     <div class="education__contentCollege_info">
-                        <h3> New York University Abu Dhabi</h3>
-                        <h3> B.s in Computer Science</h3>
-                        <h3> Class of 2022 </h3>
+                        <h3> {{data.education.college}}</h3>
+                        <h3> Major in {{data.education.major}}</h3>
+                        <h3> Class of {{data.education.class}} </h3>
                     </div>
                 </div>
             </div>  
@@ -63,15 +60,16 @@
     <div class="work" id="experience">
         <h1 class="work__title">I have worked on</h1>
         <div class="work__cards">
-            <div class="work__card" style="background-image:url(../static/img/logo.jpg) ;">
+            {% for exp in data.experiences: %}
+            <div class="work__card" style="background-image:url({{exp.photo}}) ;">
                 <div class="work__cardContainer">
-                    <h2 class="work__descriptionTitle">Tinder Clone</h2>
-                    <p>Necessitatibus iure, porro corporis fugit qui </p>
-                    <a href="#" class="button">Learn More</a>
+                    <h2 class="work__descriptionTitle">{{exp.name}}</h2>
+                    <p>{{exp.description}} </p>
+                    <a href={{exp.more}} target="_blank" class="button">Learn More</a>
                 </div>   
             </div>
             
-
+            {% endfor %}
         </div>
         
     </div>
@@ -79,12 +77,16 @@
     <div class="work" id="hobbies">
         <h1 class="work__title">My Hobbies Are</h1>
         <div class="work__cards">
-            <div class="work__card" style="background-image:url(../static/img/logo.jpg) ;">
+            {% for hob in data.hobbies: %}
+            <div class="work__card" style="background-image:url({{hob.photo}}) ;">
                 <div class="work__cardContainer">
-                    <h2 class="work__descriptionTitle">Tinder Clone</h2>
-                    <p>Necessitatibus iure, porro corporis fugit qui </p>
+                    <h2 class="work__descriptionTitle">{{hob.name}}</h2>
+                    <p>{{hob.description}} </p>
+                    <a href={{hob.more}} target="_blank" class="button">Learn More</a>
                 </div>   
             </div>
+            
+            {% endfor %}
             
 
         </div>
