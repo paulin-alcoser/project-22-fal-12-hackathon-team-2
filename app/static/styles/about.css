@@ -30,6 +30,11 @@
 }
 .about__headerButton {
     margin: 10px;
+    text-decoration: none;
+}
+
+.about__headerButton:hover{
+    color: lightgrey;
 }
 
 .about__content{
@@ -39,22 +44,22 @@
     justify-content: center;
     height: 92vh;
     width:100vw;
-    background-color: var(--background-color); 
+    /* background-color: var(--background-color);  */
     
     
 }
 
 .about__contentTitle{
     color: var(--primary-color);
+    margin-bottom: 10vh;
 }
 
 .about__contentCenter{
     flex: 1;
     width: 100vw;
     display:flex;
-    align-items: center;
-    justify-content: space-evenly;
-    
+    align-items: start;
+    justify-content: space-evenly; 
 }
 
 
@@ -62,10 +67,11 @@
     width: 33vw;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .about__contentCenter_img > img{
-    height:400px;
     height:300px;
     object-fit: cover;
     border-radius: 10px;
@@ -73,6 +79,24 @@
     align-self: center;
 
 }
+.about__contentButtons {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+    width: 100%;
+}
+
+.about__contentButtons > a >img{
+    height: 50px;
+    width: 50px;
+    margin: 20px;
+    transition: transform 250ms ease;
+}
+
+.about__contentButtons > a > img:hover{
+    transform: scale(1.15);
+}
+
 
 .about__contentCenter > p {
     width: 33vw;
@@ -121,19 +145,6 @@
     box-shadow:0px 5px 10px -9px rgba(0, 0, 0, 0.7);
 }
 
-.education__contentDescription{
-    display:flex;
-    flex-direction: column;
-    width:33vw;
-    align-items: center;
-    font-size: var(--secondary-heading-size);
-    color: var(--primary-color);
-}
-
-.education__contentDescription > h2 {
-
-}
-
 
 /* ---------------------------------------------------------- */
 .work{
@@ -146,13 +157,14 @@
 }
 
 .work__title{
-    color: var(--primary-color)
+    color: var(--primary-color);
+    margin-top: 10vh;
 }
 
 .work__cards{
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-evenly; */
+    justify-content: space-evenly;
     align-items: center;
     width: 100vw;
     
@@ -170,9 +182,9 @@
     color: var(--background-color);
     overflow: hidden;
     transition: transform 500ms ease;
-    margin-bottom: 50px;
-   
+    margin-bottom: 50px;   
 }
+
 
 .work__card:hover{
     transform: scale(1.05);
@@ -234,7 +246,21 @@
     background-color: var(--secondary-color);
 }
 
+.map__content{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
+#map{
+    height:70vh;
+    width: 80vw;
+    border-radius: 10px;
+    box-shadow:0px 10px 10px -1px rgba(0, 0, 0, 0.7);
+}
 
 
 

@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link lang='sass' rel="stylesheet" href="../static/styles/about.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script type="module" src="../static/scripts/about.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -12,24 +14,32 @@
         <h1>Paulin Alcoser</h1>
         <div class="about__headerButtons">
             
-            <div class="about__headerButton">About</div>
+            <a href="#about" class="about__headerButton">About</a>
             
-            <div class="about__headerButton">Experience</div>
+            <a href="#experience" class="about__headerButton">Experience</a>
             
-            <div class="about__headerButton">Hobbies</div>
+            <a href="#hobbies" class="about__headerButton">Hobbies</a>
            
-            <div class="about__headerButton">Map</div>
+            <a href="#map_section" class="about__headerButton">Map</a>
                 
         </div>  
     </div>
     
-    <div class="about__content">
+    <div class="about__content" id="about">
         <h1 class="about__contentTitle">
-            Hello! I am Paulin 
+            Hello! I am Paulin Alcoser
         </h1>
         <div class="about__contentCenter">
             <div class="about__contentCenter_img">
                 <img src="../static/img/PaulinProfile.jpg" alt="photo">
+                <div class="about__contentButtons">
+                    <a href="">
+                        <img src="../static/img/github2.png" alt="">
+                    </a>
+                    <a href="">
+                        <img src="../static/img/linkedIn.png" alt="">
+                    </a>    
+                </div>
             </div>
             
             <p> Duis est consequat pariatur aute enim tempor mollit ea cupidatat irure est cupidatat. Sunt amet elit fugiat ullamco duis magna. Consectetur pariatur irure cupidatat consequat sunt veniam velit do amet in culpa consequat est. Cillum nisi eu et laboris in adipisicing sint nostrud. Eu non duis nostrud eiusmod minim qui mollit magna sit sunt laboris aliquip minim. Do exercitation commodo esse anim ea ex sit duis. Ea occaecat anim sint nulla sunt.
@@ -50,7 +60,7 @@
     </div>
     
 
-    <div class="work">
+    <div class="work" id="experience">
         <h1 class="work__title">I have worked on</h1>
         <div class="work__cards">
             <div class="work__card" style="background-image:url(../static/img/logo.jpg) ;">
@@ -66,7 +76,30 @@
         
     </div>
 
+    <div class="work" id="hobbies">
+        <h1 class="work__title">My Hobbies Are</h1>
+        <div class="work__cards">
+            <div class="work__card" style="background-image:url(../static/img/logo.jpg) ;">
+                <div class="work__cardContainer">
+                    <h2 class="work__descriptionTitle">Tinder Clone</h2>
+                    <p>Necessitatibus iure, porro corporis fugit qui </p>
+                </div>   
+            </div>
+            
+
+        </div>
+        
+    </div>
+
+    <div class="map__content" id="map_section">
+        <h1 class="work__title">These are the places I have been</h1>
+        <div id="map"></div>
+    </div>
+
     
-    
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer
+    ></script>
 </body>
 </html>
