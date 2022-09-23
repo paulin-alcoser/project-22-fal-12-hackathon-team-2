@@ -1,0 +1,71 @@
+{
+    "info":{
+        "fullName": "Alexis Gray",
+        "name": "Alexis",
+        "photo":"../static/img/alexispfp.jpeg",
+        "about":"Third year student at the University of Kansas majoring in Computer Science, lover of all things art and makeup, aspiring traveller.",
+        "github": "https://github.com/alexisgray623",
+        "linkedin": "www.linkedin.com/in/alexisgray623"
+    },
+    "education":{
+        "college":"University of Kansas",
+        "major": "Computer Science",
+        "class": "2024"
+    },
+    "experiences":[
+        {
+            "name": "MLH Fellowship",
+            "description": "12-week internship where participants collaborate on real open source projects with engineers from top companies",
+            "more":"https://fellowship.mlh.io/programs/site-reliability-engineering",
+            "photo": "../static/img/logo.jpg"
+        },
+        {
+            "name": "2022 Target Women in Tech Symposium",
+            "description":"4-day symposium where participants attended a variety of differnet presentations by senior-level engineers, were given a tour of Target Tech innovation, and participated in a hackathon",
+            "more": "disabled",
+            "photo":"../static/img/target.jpeg"
+
+        },
+        {
+            "name":"Research Assistant - KSU",
+            "description": "Worked as a research assistant to Dr. Eugene Vasserman at KSU, managed data in Excel, ran experiments on Information Security",
+            "more":"disabled"
+        }
+    ],
+    "hobbies":[
+        {
+            "name": "Flute",
+            "description": "I have been classically trained in flute for 14 years, and continue to train and play in ensembles, as well as teach lessons",
+            "photo":"../static/img/flute.jpeg",
+            "more":"disabled"
+            
+        },
+        {
+            "name": "Makeup",
+            "description": "I picked up makeup as a de-stressor hobby my third year of high school, and since then have turned it into a small business to do others' makeup for events",
+            "photo":"../static/img/makeup.jpeg",
+            "more": "disabled"
+        },
+
+        {
+            "name": "Running a study instagram",
+            "description": "My friends convinced me to start a study instagram to post my notes because, for some reason, they (and everyone else) really love my handwriting",
+            "photo":"../static/img/studygram.jpeg",
+            "more":"https://www.instagram.com/livin.l1ke.lex/"
+        }
+    ],
+    "locations":[
+        {
+            "lat":37.532600,
+            "long":127.024612
+        },
+        {
+            "lat":48.864716,
+            "long":2.349014
+        },
+        {
+            "lat":-37.840935,
+            "long": 144.946457
+        }
+    ]
+}
