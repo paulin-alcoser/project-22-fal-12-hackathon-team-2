@@ -6,12 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link lang='sass' rel="stylesheet" href="../static/styles/about.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script type="module" src="../static/scripts/about.js"></script>
-    <title>Document</title>
+    <script type="text/javascript">
+        function initMap() {
+            // The location of Uluru
+            var dataJson = '{{data.locations|tojson|safe}}'
+            dataJson.replaceAll("\'","\"")
+            console.log(dataJson)
+            var locations = Array.from(JSON.parse(dataJson))
+        
+            const london = { lat:51.52574482485191, lng: -0.12634439219556462 };
+            // The map, centered at Uluru
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 2,
+                center: london,
+            });
+            
+            for(var i = 0; i < locations.length; i++){
+                console.log(locations[i].lat, locations[i].long)
+                var new_pos = {lat:locations[i].lat, lng: locations[i].long}
+                new google.maps.Marker({
+                    position: new_pos,
+                    map: map,
+                });
+            }
+        }
+        window.initMap = initMap;
+
+    </script>
+    <title>{{data.info.fullName}}</title>
 </head>
 <body>
     <div class="about__header">
-        <h1>{{data.info.fullName}}</h1>
+        <a href="/home">
+            <h1>{{data.info.fullName}}</h1>
+        </a>
+        
         <div class="about__headerButtons">
             
             <a href="#about" class="about__headerButton">About</a>
