@@ -29,22 +29,23 @@
         {
             "name":"Tinder Clone",
             "description": " Recreated Tinder interface with React and firebase",
-            "more":"https://github.com/paulin-alcoser/tinder-clone"
+            "more":"https://github.com/paulin-alcoser/tinder-clone",
+            "photo":"../static/img/tinder-clone.png"
         }
     ],
     "hobbies":[
         {
             "name": "Soccer",
-            "description": "I have been playing soccer since I am 5 years old and I have been fortunate to make lots of friends through this hooby",
+            "description": "I have been playing soccer since I am 5 years old and I have been fortunate to make lots of friends through this game",
             "photo":"../static/img/soccer.jpeg",
-            "more":"#hobbies"
+            "more":"disabled"
             
         },
         {
             "name": "Guitar",
-            "description": "I learned how to play the guitar when I was 10 and since then i",
+            "description": "I learned how to play the guitar when I was 10 and since then I had have many hours of fun where I can just escape to the sounds of the guitar",
             "photo":"../static/img/guitar.jpg",
-            "more": "#hobbies"
+            "more": "disabled"
         },
 
         {

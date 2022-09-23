@@ -157,11 +157,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-top: 5px solid var(--primary-color);
 }
 
 .work__title{
     color: var(--primary-color);
     margin-top: 10vh;
+    border: 2px solid var(--primary-color);
+    padding: 0.5em;
+    border-radius: 5px; 
+    box-shadow:0px 5px 10px -9px rgba(0, 0, 0, 0.7);
+    margin-bottom: 30px;
 }
 
 .work__cards{
@@ -180,6 +186,8 @@
     box-shadow:0px 10px 10px -1px rgba(0, 0, 0, 0.7);
     font-size: 14px;
     background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     padding: 10rem 0 0;
     max-width: 35ch;
     color: var(--background-color);
@@ -224,7 +232,7 @@
     background: var(--primary-color);
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 500ms ease;
+    transition: transform 1000ms ease;
 }
 
 .work__card:hover .work__descriptionTitle::after{
@@ -244,6 +252,8 @@
     padding: 0.5em 1.25em; 
     border-radius: 5px;
 }
+
+
 
 .button:hover, button:focus{
     background-color: var(--secondary-color);
@@ -267,3 +277,10 @@
 
 
 
+.work.hobbies{
+    background-color: var(--secondary-color)
+}
+
+.work.hobbies > h1{
+    color: var(--background-color);
+}

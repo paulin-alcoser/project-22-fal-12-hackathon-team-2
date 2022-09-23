@@ -87,7 +87,7 @@
     
 
     <div class="work" id="experience">
-        <h1 class="work__title">I have worked on</h1>
+        <h1 class="work__title">Experience</h1>
         <div class="work__cards">
             {% for exp in data.experiences: %}
             <div class="work__card" style="background-image:url({{exp.photo}}) ;">
@@ -103,15 +103,19 @@
         
     </div>
 
-    <div class="work" id="hobbies">
-        <h1 class="work__title">My Hobbies Are</h1>
+    <div class="work hobbies" id="hobbies">
+        <h1 class="work__title">Hobbies</h1>
         <div class="work__cards">
             {% for hob in data.hobbies: %}
             <div class="work__card" style="background-image:url({{hob.photo}}) ;">
                 <div class="work__cardContainer">
                     <h2 class="work__descriptionTitle">{{hob.name}}</h2>
                     <p>{{hob.description}} </p>
+                    {% if hob.more == "disabled" %}
+                        <a class="button" style="background-color: transparent;" ></a>
+                    {% else %}
                     <a href={{hob.more}} target="_blank" class="button">Learn More</a>
+                    {% endif %}
                 </div>   
             </div>
             
@@ -123,7 +127,7 @@
     </div>
 
     <div class="map__content" id="map_section">
-        <h1 class="work__title">These are the places I have been</h1>
+        <h1 class="work__title">Places</h1>
         <div id="map"></div>
     </div>
 
