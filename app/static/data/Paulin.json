@@ -10,7 +10,8 @@
     "education":{
         "college":"New York University Abu Dhabi",
         "major": "Computer Science",
-        "class": "2022"
+        "class": "2022",
+        "photo": "../static/img/nyuad.png"
     },
     "experiences":[
         {

@@ -74,7 +74,7 @@
             <p> {{data.info.about}}</p> 
             <div class="about__contentCenter">
                 <div class="education__contentCollege">
-                    <img src="../static/img/nyuad.png" alt="photo">
+                    <img src={{data.education.photo}} alt="photo">
                     <div class="education__contentCollege_info">
                         <h3> {{data.education.college}}</h3>
                         <h3> Major in {{data.education.major}}</h3>
@@ -94,7 +94,11 @@
                 <div class="work__cardContainer">
                     <h2 class="work__descriptionTitle">{{exp.name}}</h2>
                     <p>{{exp.description}} </p>
+                    {% if exp.more == "disabled" %}
+                        <a class="button" style="background-color: transparent;" ></a>
+                    {% else %}
                     <a href={{exp.more}} target="_blank" class="button">Learn More</a>
+                    {% endif %}
                 </div>   
             </div>
             

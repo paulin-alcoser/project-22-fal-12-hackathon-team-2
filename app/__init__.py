@@ -22,7 +22,7 @@ def about(username):
         data = json.load(open(json_url))
         return render_template('about.html', data=data)
     elif username == "AlexisGray":
-        json_url = os.path.join(SITE_ROOT, "static/data", "Alexis.json")
+        json_url = os.path.join(SITE_ROOT, "static/data", "alexis.json")
         data = json.load(open(json_url))
         return render_template('about.html', data=data)
     else: 
