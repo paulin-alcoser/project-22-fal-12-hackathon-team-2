@@ -27,3 +27,15 @@ def about(username):
         return render_template('about.html', data=data)
     else: 
         return "<h1>Username did not match</h1>"
+
+
+# for dirName, subdirList, fileList in os.walk(rootDir , topdown=False):
+#     if dirName.endswith("1eb95ebb-d87d-4aac-XX-XX182"):
+#         abs_path = os.path.join(dirName, file)
+#         print('Found directory: %s' % dirName)
+#         #print(fileList)
+#         for file in fileList:
+#             if file.endswith("activities.json"):
+#                 #print('\t%s' % file)
+#                 json_data = json.loads(open(abs_path).read())
+#                 pprint(json_data)
