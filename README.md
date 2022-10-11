@@ -48,3 +48,28 @@ You'll now be able to access the website at `localhost:5000` or `127.0.0.1:5000`
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
+
+## Inspiration
+We took inspiration from two websites 1) Dapi.com 2) MLH website. We wanted to combine the simplicity and elegance of Dapi's website with the wholesome vibes of MLH's website. One of our biggest features is that our design emphasizes scrolling down this is because we believe that scrolling down really enhances the UX of a website
+## What it does
+It showcases the team members experiences, work, hobbies and places they've visited.
+## How we built it
+Paulin built the front end, and Alexis built the back end. We created a branch per feature, and whenever we move to a new feature, we create it out of the previous branch. Then we made a PR to main
+## Challenges we ran into
+It was hard to come up with arquitecture of the portfolio. For most of the project, we thought we were going to need a HTML files per team member. Fortunately, towards the end, we were able to figure out how to share same HTML and CSS files. 
+## Accomplishments that we're proud of
+- We believe the CSS was the best part of our project. We were able to add some animations, box shadows and sticky nav bar.  We invested a lot of time watching several videos from Kevin Powel 
+## What we learned
+- We learned that sometimes designing the architecture is as important as coding it. Many times we had to go back because our design hit a dead end
+- We learned how to learn new technologies like flask and jinja. I
+- This project would not have been possible without stack overflow. So we realized that is very important to contribute to the community
+ 
+## What's next for Alexis&Paulin Portfolio
+Regarding the code quality 
+- Changing the name of CSS selectors
+- Separating CSS in different files
+Regarding features
+- Adding mobile mode
+- Adding dark mode
+- Add spotify, maybe?
+- Add a gallery of photos
