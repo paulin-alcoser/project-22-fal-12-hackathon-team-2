@@ -2,6 +2,8 @@ import os
 from flask import Flask, render_template, json
 from dotenv import load_dotenv
 from peewee import *
+import datetime
+
 
 load_dotenv()
 app = Flask(__name__)
@@ -13,7 +15,19 @@ mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
     port=3306
 )
 
-print(mydb)
+class TimelinePost(Model):
+    name = CharField()
+    email = CharField()
+    content = TextField()
+    created_at = DateTimeField(default=datetime.datetime.now)
+
+    class Meta:
+        database = mydb
+        
+
+mydb.connect()
+mydb.create_tables([TimelinePost])   
+
 
 
 @app.route('/yelp')
@@ -37,6 +51,8 @@ def about(username):
         return render_template('about.html', data=data)
     else: 
         return "<h1>Username did not match</h1>"
+
+
 
 
 # for dirName, subdirList, fileList in os.walk(rootDir , topdown=False):
