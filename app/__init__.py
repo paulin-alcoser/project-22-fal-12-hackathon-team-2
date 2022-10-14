@@ -8,6 +8,7 @@ import datetime
 load_dotenv()
 app = Flask(__name__)
 
+
 mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
     user=os.getenv("MYSQL_USER"),
     password=os.getenv("MYSQL_PASSWORD"),
@@ -53,7 +54,14 @@ def about(username):
         return "<h1>Username did not match</h1>"
 
 
+# @app.route('/api/timeline_post', methods=['POST'])
+# def post_time_line_post():
+#     name = request.form['name']
+#     email = request.form['email']
+#     content = request.form['content']
+#     timeline_post = TimelinePost.create(name=name, email=email, content=content)
 
+#     return model_to_dict(timeline_post)
 
 # for dirName, subdirList, fileList in os.walk(rootDir , topdown=False):
 #     if dirName.endswith("1eb95ebb-d87d-4aac-XX-XX182"):
