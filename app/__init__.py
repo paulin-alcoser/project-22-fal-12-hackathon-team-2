@@ -74,6 +74,13 @@ def get_time_line_post():
             for p in TimelinePost.select().order_by(TimelinePost.created_at.desc())
         ]
     }
+
+
+@app.route('/home/<username>/timeline')
+def timeline(username):
+    print(username)
+    return render_template('timeline.html')
+
 # for dirName, subdirList, fileList in os.walk(rootDir , topdown=False):
 #     if dirName.endswith("1eb95ebb-d87d-4aac-XX-XX182"):
 #         abs_path = os.path.join(dirName, file)

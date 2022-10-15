@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="timeline" id="timeline">
+            <h1 class="timeline_title">Timeline</h1>
+            
+            <form class="timeline_form" id="form">
+                <input class="timeline_input" name="name" type="text">
+                <input class="timeline_input" name="email" type="text">
+                <input class="timeline_input" name="content" type="text">
+                <button class="timeline_button" type="submit">Submit</button>
+            </form>
+            
+            <div class="timeline__cards">
+                <div class="work__card">
+                    <h3>Name</h3>
+                    <p>created at</p>
+                    <p> Hello World</p>   
+                </div>
+            </div>   
+        </div>
+        <script type="text/javascript">
+            /* Sending the formData object as payload using Fetch */
+            const form = document.getElementById('form');
+            
+            form.addEventListener('submit', function(e) {
+                // Prevent default behavior:
+                e.preventDefault();
+                // Create payload as new FormData object:
+                console.log('submit')
+                const payload = new FormData(form);
+                // Post the payload using Fetch:
+                fetch('http://127.0.0.1:5000/api/timeline_post', {
+                    method: 'POST',
+                    body: payload,
+                })
+                .then(res => res.json())
+                .then(data => console.log(data))
+            })
+        </script>
+    </body>
+</html>
