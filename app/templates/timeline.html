@@ -50,12 +50,13 @@
                 })
                 .then(res => res.json())
                 .then((data) => {
+
                     generatePost(data)
                 })
             })
 
             function generatePost(data){
-                print('data: ', data)
+                console.log('data: ', data)
                 const postCard = document.createElement('div');
 
                 const h3 = document.createElement('h3');
