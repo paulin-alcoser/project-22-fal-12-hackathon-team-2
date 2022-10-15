@@ -21,7 +21,7 @@
                 <button class="timeline_button" type="submit">Submit</button>
             </form>
             
-            <div class="timeline__cards" id="timeline">
+            <div class="timeline__cards" id="timeline_posts">
                 {% for post in data.timeline_posts: %}
                     <div class="timeline_card">
                         <h3>Name: {{post.name}}</h3>
@@ -56,7 +56,7 @@
             })
 
             function generatePost(data){
-                const timeline = document.getElementById("timeline")
+                const timeline = document.getElementById("timeline_posts")
                 console.log('data: ', data)
                 const postCard = document.createElement('div');
 
