@@ -5,10 +5,12 @@ from playhouse.shortcuts import model_to_dict
 from dotenv import load_dotenv
 from peewee import *
 import datetime
+from flask_cors import CORS, cross_origin
 
 
 load_dotenv()
 app = Flask(__name__)
+CORS(app)
 
 
 mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
@@ -30,7 +32,6 @@ class TimelinePost(Model):
 
 mydb.connect()
 mydb.create_tables([TimelinePost])   
-
 
 
 @app.route('/yelp')
