@@ -1,4 +1,5 @@
 import os
+from webbrowser import get
 from flask import Flask, render_template, json, request
 from playhouse.shortcuts import model_to_dict
 from dotenv import load_dotenv
@@ -78,8 +79,8 @@ def get_time_line_post():
 
 @app.route('/home/<username>/timeline')
 def timeline(username):
-    print(username)
-    return render_template('timeline.html')
+    print(os.getenv("URL"))
+    return render_template('timeline.html', data=get_time_line_post(), url=os.getenv("URL"))
 
 # for dirName, subdirList, fileList in os.walk(rootDir , topdown=False):
 #     if dirName.endswith("1eb95ebb-d87d-4aac-XX-XX182"):
