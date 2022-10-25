@@ -50,16 +50,26 @@ def base():
 @app.route('/home/<username>')
 def about(username):
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
-    if username == "PaulinAlcoser":
-        json_url = os.path.join(SITE_ROOT, "static/data", "Paulin.json")
-        data = json.load(open(json_url))
-        return render_template('about.html', data=data)
-    elif username == "AlexisGray":
-        json_url = os.path.join(SITE_ROOT, "static/data", "alexis.json")
+    # if username == "PaulinAlcoser":
+    #     json_url = os.path.join(SITE_ROOT, "static/data", "Paulin.json")
+    #     data = json.load(open(json_url))
+    #     return render_template('about.html', data=data)
+    # elif username == "AlexisGray":
+    #     json_url = os.path.join(SITE_ROOT, "static/data", "alexis.json")
+    #     data = json.load(open(json_url))
+    #     return render_template('about.html', data=data)
+    # else: 
+    #     return "<h1>Username did not match</h1>"
+    # data_url = username +'1' + ".json"
+    
+    json_url = os.path.join(SITE_ROOT, "static/data", username + ".json")
+    fileExist = os.path.exists(json_url)
+    if fileExist:
         data = json.load(open(json_url))
         return render_template('about.html', data=data)
     else: 
         return "<h1>Username did not match</h1>"
+    
 
 
 @app.route('/api/timeline_post', methods=['POST'])
