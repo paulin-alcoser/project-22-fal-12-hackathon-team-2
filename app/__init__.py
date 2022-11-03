@@ -102,7 +102,7 @@ def get_time_line_post():
 @app.route('/home/<username>/timeline')
 def timeline(username):
     print(os.getenv("URL"))
-    return render_template('timeline.html', data=get_time_line_post(), url=os.getenv("URL"))
+    return render_template('timeline.html', data=get_time_line_post(), url=os.getenv("URL")) #delete get_timelin....
 
 
 # for dirName, subdirList, fileList in os.walk(rootDir , topdown=False):
