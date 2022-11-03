@@ -40,7 +40,7 @@ mydb.connect()
 mydb.create_tables([TimelinePost])   
 
 
-@app.route('/yelp')
+@app.route('/')
 def index():
     return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"))
 
