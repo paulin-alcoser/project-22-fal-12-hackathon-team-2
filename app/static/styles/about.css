@@ -306,7 +306,7 @@
 .timeline_input{
     padding: 10px;
     border-radius: 5px;
-    border-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
 }
 
 label{
@@ -355,7 +355,7 @@ input:focus ,textarea:focus{
 }
 
 .timeline_photo{
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color:white;
     width: 40px;
     height: 40px;
@@ -381,6 +381,7 @@ input:focus ,textarea:focus{
 
 .timeline_date{
     margin-right: 10px;
+    font-size: 12px;
 }
 
 .timeline_content{

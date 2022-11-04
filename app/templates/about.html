@@ -35,9 +35,9 @@
     </script>
     <title>{{data.info.fullName}}</title>
 </head>
-<body>
+<body  onload="getPosts()">
     <div class="about__header">
-        <a href="/home">
+        <a href="/">
             <h1>{{data.info.fullName}}</h1>
         </a>
         
@@ -51,7 +51,7 @@
            
             <a href="#map_section" class="about__headerButton">Map</a>
 
-            <a href="/home/{{data.info.urlName}}/timeline" class="about__headerButton">Timeline</a>
+            <a href="#timeline" class="about__headerButton">Timeline</a>
                 
         </div>  
     </div>
@@ -137,7 +137,7 @@
         <div id="map"></div>
     </div>
     <!-- ------------------------------------------Timeline -->
-    <div class="work">
+    <div class="work" id="timeline">
         <h1 class="work__title">Timeline</h1>
         
         <div class="timeline__container">
@@ -165,7 +165,7 @@
                         </div>
                         <p class="timeline_content">Today I had my second mock interview. Great learning experience!</p>   
                     </div>
-                    <div class="timeline_card">
+                    <!-- <div class="timeline_card">
                         <div class="timeline_header">
                             <div class="timeline_person">
                                 <h2 class="timeline_photo">P</h1>
@@ -190,8 +190,8 @@
                             <p class="timeline_date"> 28/10/11 </p>
                         </div>
                         <p class="timeline_content">Yesterday I had my second mock interview. Great learning experience!</p>   
-                    </div>
-                    <div class="timeline_card">
+                    </div> -->
+                    <!-- <div class="timeline_card">
                         <div class="timeline_header">
                             <div class="timeline_person">
                                 <h2 class="timeline_photo">P</h1>
@@ -216,7 +216,7 @@
                             <p class="timeline_date"> 28/10/11 </p>
                         </div>
                         <p class="timeline_content">Yesterday I had my second mock interview. Great learning experience!</p>   
-                    </div>
+                    </div> -->
             </div> 
         </div>
         
@@ -231,5 +231,7 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClG7VvTcmhuUjRmCKVdTkJByd1i9zZnr4&callback=initMap&v=weekly"
       defer
     ></script>
+
+    <script src="../static/scripts/about.js" defer></script>
 </body>
 </html>
