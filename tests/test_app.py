@@ -11,7 +11,7 @@ class AppTestCase(unittest.TestCase):
     # home page testing start
 
     def test_home(self):
-        response = self.client.get("/home")
+        response = self.client.get("/")
         assert response.status_code == 200
         html = response.get_data(as_text=True)
         assert "<title>Portfolio</title>" in html
