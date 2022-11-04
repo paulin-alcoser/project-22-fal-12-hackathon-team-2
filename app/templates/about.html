@@ -136,7 +136,39 @@
         <h1 class="work__title">Places</h1>
         <div id="map"></div>
     </div>
+    <!-- ------------------------------------------Timeline -->
+    <div class="work">
+        <h1 class="work__title">Timeline</h1>
+        
+        <div class="timeline__container">
+            <form class="timeline_form" id="form">
+                <label for="name">Name:</label>
+                <input class="timeline_input" name="name" type="text">
+                <label for="email">Email:</label>
+                <input class="timeline_input" name="email" type="text">
+                <label for="content">Content:</label>
+                <input class="timeline_input" name="content" type="text">
+                <button class="timeline_button" type="submit">Submit</button>
+            </form>
 
+            <div class="timeline__cards" id="timeline_posts">
+                {% for post in data.timeline_posts: %}
+                    <div class="timeline_card">
+                        <h3>Name: {{post.name}}</h3>
+                        <p>Email: {{post.email}}</p>
+                        <p>Created at {{post.created_at}}</p>
+                        <p>Content: {{post.content}} </p>   
+                    </div>
+                {% endfor %} 
+            </div> 
+        </div>
+        
+        
+         
+        
+    </div>
+
+    <!-- end of _____________________________________________________Timeline -->
     
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClG7VvTcmhuUjRmCKVdTkJByd1i9zZnr4&callback=initMap&v=weekly"
