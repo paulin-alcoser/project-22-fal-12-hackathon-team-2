@@ -40,15 +40,15 @@ mydb.connect()
 mydb.create_tables([TimelinePost])   
 
 
-@app.route('/')
-def index():
-    return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"))
+# @app.route('/')
+# def index():
+#     return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"))
 
-@app.route('/home')
+@app.route('/')
 def base():
     return render_template('base.html')
 
-@app.route('/home/<username>')
+@app.route('/<username>')
 def about(username):
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
     # if username == "PaulinAlcoser":
@@ -94,12 +94,12 @@ def get_time_line_post():
     return {
         'timeline_posts': [
             model_to_dict(p)
-            for p in TimelinePost.select().order_by(TimelinePost.created_at.desc())
+            for p in TimelinePost.select().order_by(TimelinePost.created_at.asc())
         ]
     }
 
 
-@app.route('/home/<username>/timeline')
+@app.route('/<username>/timeline')
 def timeline(username):
     print(os.getenv("URL"))
     return render_template('timeline.html', data=get_time_line_post(), url=os.getenv("URL")) #delete get_timelin....
