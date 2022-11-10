@@ -103,15 +103,3 @@ def get_time_line_post():
 def timeline(username):
     print(os.getenv("URL"))
     return render_template('timeline.html', data=get_time_line_post(), url=os.getenv("URL")) #delete get_timelin....
-
-
-# for dirName, subdirList, fileList in os.walk(rootDir , topdown=False):
-#     if dirName.endswith("1eb95ebb-d87d-4aac-XX-XX182"):
-#         abs_path = os.path.join(dirName, file)
-#         print('Found directory: %s' % dirName)
-#         #print(fileList)
-#         for file in fileList:
-#             if file.endswith("activities.json"):
-#                 #print('\t%s' % file)
-#                 json_data = json.loads(open(abs_path).read())
-#                 pprint(json_data)
