@@ -3,7 +3,7 @@ on:
   push: # Trigger on push on main branch
     branches:
       - main
-  pull_request: # Trigger on pull on main branch
+  pull_request: 
     branches:
       - main
 jobs:
