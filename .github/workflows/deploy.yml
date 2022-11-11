@@ -6,10 +6,35 @@ on:
   workflow_dispatch:
 
 jobs:
+  test: # Job calle run tests
+    runs-on: ubuntu-latest
+    name: Run Tests
+    env:
+      TESTING: true # setting up environment testing because we are testing
+    steps:
+      - name: Checkout Repository # Getting the reposotory
+        uses: actions/checkout@v2 # prebuilt action
+
+      - name: Setup Python # Getting python
+        uses: actions/setup-python@v4 # prebuilt action
+        with:
+          python-version: '3.6.8'  # Change to your desired Python version
+
+      - name: Setup Python Virtual Environment
+        run: python -m venv python3-virtualenv # Why is it good to install virtual environment evrytime 
+
+      - name: Install Dependencies
+        run: python3-virtualenv/bin/pip install -r requirements.txt
+        
+      - name: Run Tests
+        run: ./run_test.sh
   deploy:
     name: "Deploy to VPS"
     runs-on: ubuntu-latest
     steps:
+      - name: exit if previous failure
+        if: ${{failure()}}
+        run: echo 'Failed Tests' && exit 1
       - name: Configure SSH
         run: |
           mkdir -p ~/.ssh/
