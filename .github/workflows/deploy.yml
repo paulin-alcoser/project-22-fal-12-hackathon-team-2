@@ -30,7 +30,7 @@ jobs:
         run: ./run_test.sh
 
       - name: Send Discord Message when failure
-        if: {{failure()}}
+        if: failure()
         run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content= Tests Failure"
   deploy:
     name: "Deploy to VPS"
