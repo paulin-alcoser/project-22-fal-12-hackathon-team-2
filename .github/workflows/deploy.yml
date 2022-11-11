@@ -30,11 +30,9 @@ jobs:
         run: ./run_test.sh
   deploy:
     name: "Deploy to VPS"
+    needs: test
     runs-on: ubuntu-latest
     steps:
-      - name: exit if previous failure
-        if: ${{failure()}}
-        run: echo 'Failed Tests' && exit 1
       - name: Configure SSH
         run: |
           mkdir -p ~/.ssh/
